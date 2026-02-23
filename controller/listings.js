@@ -8,10 +8,10 @@ const geocodingClient = mbxGeocoding({ accessToken: maptoken });
 
 module.exports.showAllListings = async (req, res) => {
     let Lists = await Listing.find()
-    res.render("./Listings/index.ejs", { Lists })
+    res.render("Listings/index", { Lists })
 }
 module.exports.renderListingAddingPage = (req, res) => {
-    res.render("./Listings/create.ejs")
+    res.render("Listings/create")
 }
 
 module.exports.listingAdding = async (req, res, next) => {
@@ -47,7 +47,7 @@ module.exports.renderUpdatingPage = async (req, res) => {
     let originalImageUrl = List.image.url;
 
     originalImageUrl = originalImageUrl.replace("/upload", "/upload/h_300/w_300")
-    res.render("./Listings/update.ejs", { List, originalImageUrl })
+    res.render("Listings/update", { List, originalImageUrl })
 }
 module.exports.UpdatingListing = async (req, res) => {
     let { id } = req.params;
@@ -82,6 +82,6 @@ module.exports.showDetailedListing = async (req, res) => {
         req.flash("error", "Listing not found")
         res.redirect("/Listing")
     } else {
-        res.render("./Listings/show.ejs", { List })
+        res.render("Listings/show", { List })
     }
 }
