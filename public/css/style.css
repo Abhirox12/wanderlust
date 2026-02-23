@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.fa-compass {
+    font-size: 1.8rem;
+    color: #ff3842 !important;
+}
+.Listings{
+    --bs-gutter-x: 0rem;
+}
+.fa-compass:hover {
+
+    transform: rotate(-90deg);
+    transition: 1s;
+}
+
+.alertclass {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.footer-company,
+.footer-socials,
+.footer-info {
+    display: flex;
+    width: 32%;
+    align-items: center;
+}
+
+.footer-company {
+    justify-content: center;
+
+}
+
+.footer {
+    display: flex;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+/* .thefooter{
+    position: absolute;
+    bottom: 0;
+} */
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer-socials {
+    font-size: 1.2rem;
+    justify-content: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.footer-socials i:hover {
+    transform: scale(1.2);
+}
+
+.footer-info {
+    justify-content: center;
+    column-gap: .5rem;
+}
+
+.footer-info p:hover {
+    text-decoration: underline;
+}
+
+
+/* card */
+
+.Listing-card {
+    border: none;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* addpage */
+.addbtn {
+    background-color: #ff3842;
+    border: none;
+}
+
+/* updatepage */
+
+.editbtn {
+    background-color: #ff3842;
+    border: none;
+}
+
+/* showpage */
+.btns {
+    display: flex;
+    column-gap: 2rem;
+}
+
+
+/* map  */
+
+#map {
+    width: 600px;
+    height: 400px;
+}
+
+.my-location-class{
+    width: 500px;
+}

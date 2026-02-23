@@ -1,0 +1,74 @@
+<% layout('/Layouts/boilerplate.ejs') -%>
+
+    <body>
+        <h1 class="text-center my-3">Update the Listing</h1>
+        <form action="/Listing/<%=List._id%>?_method=PUT" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-8 my-3 offset-2">
+                    <div class="mb-3">
+
+                        <label class="form-label" for="title">Title:</label>
+                        <input type="text" name="Listing[title]" value="<%=List.title %>" id="title"
+                            class="form-control" required>
+                        <div class="invalid-feedback">
+                            please fill the title
+                        </div>
+                    </div>
+                    <div class="mb-3">
+
+                        <label class="form-label" for="description">description:</label>
+                        <textarea name="Listing[description]" id="description" rows="3" cols="30" class="form-control"
+                            required><%=List.description %></textarea>
+                        <div class="invalid-feedback">
+                            please fill the description
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image">Image</label>
+                            <div class="Original_image my-2">
+                                <img src="<%=originalImageUrl%>" alt="">
+                            </div>
+                        <input type="file" name="Listing[image]"  id="image"
+                            class="form-control">
+                    </div>
+                    <div class="row">
+
+                        <div class="mb-3 col-4">
+
+                            <label class="form-label" for="price">Price:</label>
+                            <input type="number" name="Listing[price]" value="<%=List.price %>" id="price"
+                                class="form-control" min="500" required>
+
+                            <div class="invalid-feedback">
+                                please fill value more than 499
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3 col-8">
+
+                            <label class="form-label" for="country">Country:</label>
+                            <input type="text" name="Listing[country]" value="<%=List.country %>" id="country"
+                                class="form-control" required>
+                            <div class="invalid-feedback">
+                                please fill the Country
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mb-3">
+
+                        <label class="form-label" for="location">Location:</label>
+                        <input type="text" name="Listing[location]" value="<%=List.location %>" id="location"
+                            class="form-control" required>
+                        <div class="invalid-feedback">
+                            please fill the location
+                        </div>
+
+                    </div>
+                    <button class="btn btn-dark editbtn">Update</button>
+                </div>
+            </div>
+        </form>
+    </body>

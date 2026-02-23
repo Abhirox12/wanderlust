@@ -1,0 +1,7 @@
+Things that are need to done 
+1. improve the responsiveness of the footer
+2. on the index page the last list item if single is shown from center first make it from the left first
+3. improve the responsiveness of the show page
+4. on update page make a reset button that will clear the data to update the new one
+5. also when data is entered it can be enters as spaces so make sure the space doesn't if the input just have space to negect the data saying please enter proper title
+mongodb+srv://abhi1207:yGNRelQtT5n0SVU2@cluster1207.fdlpclr.mongodb.net/?appName=Cluster1207
