@@ -82,6 +82,8 @@ module.exports.showDetailedListing = async (req, res) => {
         req.flash("error", "Listing not found")
         res.redirect("/Listing")
     } else {
-        res.render("Listings/show", { List })
+        res.render("Listings/show", {
+            List, mapToken: process.env.MAP_TOKEN
+        })
     }
 }

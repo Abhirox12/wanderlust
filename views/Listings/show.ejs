@@ -1,8 +1,8 @@
 <% layout('/Layouts/boilerplate.ejs') -%>
     <script>
-        const maptoken = "<%= process.env.Map_TOKEN %>"
-        const coordinates = <%-JSON.stringify(List.geometry.coordinates) %>;
-        const locations = <%-JSON.stringify(List.location)%>;
+        mapboxgl.accessToken = "<%= mapToken %>";
+        const coordinates = <% -JSON.stringify(List.geometry.coordinates) %>;
+        const locations = <% -JSON.stringify(List.location) %>;
     </script>
 
     <body>
@@ -26,7 +26,7 @@
                         </p>
                         <p class="card-text">
                             <%= List.location %>
-                            
+
                         </p>
                         <p class="card-text">
                             <%= List.country %>
